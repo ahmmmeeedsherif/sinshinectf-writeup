@@ -1,50 +1,50 @@
 ## Enumeration
 **First I make nmap scan and I found SSH and HTTP Ports opened**
-<img src="https://github.com/ahmmmeeedsherif/sunshinectf-writeup/blob/main/1.png" />
+![[1 1.png]]
 **as the HTTP is opened so we will make directory enumeration to find hidden directories**
-<img src="https://github.com/ahmmmeeedsherif/sunshinectf-writeup/blob/main/2.png" />
+![[2 1.png]]
 **I found wordpress directory **
 ## Initial Access
 **I entered /wordpress/wp-login.php**
 **I entered the username and password admin and I found that the username admin is already registered **
-<img src="https://github.com/ahmmmeeedsherif/sunshinectf-writeup/blob/main/3.png" />
+![[3 1.png]]
 **I made brute forcing on the user admin and I found the password**
-<img src="https://github.com/ahmmmeeedsherif/sunshinectf-writeup/blob/main/4.png" />
+![[4 1.png]]
 **I found a plugin called uploader so I will use it **
-<img src="https://github.com/ahmmmeeedsherif/sunshinectf-writeup/blob/main/5.png" />
+![[6 1.png]]
 **I entered the the Pages to use the Plugin**
-<img src="https://github.com/ahmmmeeedsherif/sunshinectf-writeup/blob/main/6.png" />
+![[7 1.png]]
 **I used by `[uploader]`**
-<img src="https://github.com/ahmmmeeedsherif/sunshinectf-writeup/blob/main/7.png" />
+![[8 1.png]]
 **I can upload any file so I uploaded a simple backdoor**
-<img src="https://github.com/ahmmmeeedsherif/sunshinectf-writeup/blob/main/8.png" />
+![[9 1.png]]
 **I found a note file in the root directory**
-<img src="https://github.com/ahmmmeeedsherif/sunshinectf-writeup/blob/main/9.png" />
+![[10 1.png]]
 **I made cat /note**
-<img src="https://github.com/ahmmmeeedsherif/sunshinectf-writeup/blob/main/10.png" />
+![[11 1.png]]
 **I found directory called note so I entered it**
-<img src="https://github.com/ahmmmeeedsherif/sunshinectf-writeup/blob/main/11.png" />
+![[12 1.png]]
 **I found .id_rsa and .note so I read both of them**
-<img src="https://github.com/ahmmmeeedsherif/sunshinectf-writeup/blob/main/12.png" />
-<img src="https://github.com/ahmmmeeedsherif/sunshinectf-writeup/blob/main/13.png" />
-<img src="https://github.com/ahmmmeeedsherif/sunshinectf-writeup/blob/main/14.png" />
+![[14 1.png]]
+![[15 1.png]]
+![[16 1.png]]
 **I take a copy from id_rsa and I put it in a file in my machine then I use john to make it as a hash to get the passphrase of it**
-<img src="https://github.com/ahmmmeeedsherif/sunshinectf-writeup/blob/main/15.png" />
+![[17 1.png]]
 **I used john to crack the passphrase**
-<img src="https://github.com/ahmmmeeedsherif/sunshinectf-writeup/blob/main/16.png" />
+![[18 1.png]]
 **I used the passphrase sunshine to enter the machine through the ssh using private key**
-<img src="https://github.com/ahmmmeeedsherif/sunshinectf-writeup/blob/main/17.png" />
+![[19 1.png]]
 **I entered the Desktop and I found the user flag**
-<img src="https://github.com/ahmmmeeedsherif/sunshinectf-writeup/blob/main/18.png" />
+![[20 1.png]]
 ## Privesc 
 **I made this command to exploit SUID Binaries**
-<img src="https://github.com/ahmmmeeedsherif/sunshinectf-writeup/blob/main/19.png" />
+![[21 1.png]]
 **I found the vim.tiny so I make a hash using openssl**
-<img src="https://github.com/ahmmmeeedsherif/sunshinectf-writeup/blob/main/20.png" />
+![[25 1.png]]
 **I use the vim.tiny to edit the file /etc/passwd to edit the root password**
-<img src="https://github.com/ahmmmeeedsherif/sunshinectf-writeup/blob/main/21.png" />
+![[26 1.png]]
 **I edited the password hash**
-<img src="https://github.com/ahmmmeeedsherif/sunshinectf-writeup/blob/main/22.png" />
+![[27 1.png]]
 **I made su root and type the password I generated and I have root priv now
 and I found the flag**
-<img src="https://github.com/ahmmmeeedsherif/sunshinectf-writeup/blob/main/23.png" />
+![[28 1.png]]

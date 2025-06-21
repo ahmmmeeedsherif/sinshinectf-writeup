@@ -3,14 +3,14 @@
 <img src="https://github.com/ahmmmeeedsherif/sunshinectf-writeup/blob/main/1.png" style="width: 100%;"/>
 **as the HTTP is opened so we will make directory enumeration to find hidden directories**
 <img src="https://github.com/ahmmmeeedsherif/sunshinectf-writeup/blob/main/2.png"/>
-**I found wordpress directory **
+**I found wordpress directory**
 ## Initial Access
 **I entered /wordpress/wp-login.php**
-**I entered the username and password admin and I found that the username admin is already registered **
+**I entered the username and password admin and I found that the username admin is already registered**
 <img src="https://github.com/ahmmmeeedsherif/sunshinectf-writeup/blob/main/3.png" style="width: 100%;"/>
 **I made brute forcing on the user admin and I found the password**
 <img src="https://github.com/ahmmmeeedsherif/sunshinectf-writeup/blob/main/4.png" style="width: 100%;"/>
-**I found a plugin called uploader so I will use it **
+**I found a plugin called uploader so I will use it**
 <img src="https://github.com/ahmmmeeedsherif/sunshinectf-writeup/blob/main/6.png" style="width: 100%;"/>
 **I entered the the Pages to use the Plugin**
 <img src="https://github.com/ahmmmeeedsherif/sunshinectf-writeup/blob/main/7.png" style="width: 100%;"/>

@@ -47,4 +47,4 @@
 <img src="https://github.com/ahmmmeeedsherif/sunshinectf-writeup/blob/main/22.png" />
 **I made su root and type the password I generated and I have root priv now
 and I found the flag**
-![[28 1.png]]
+<img src="https://github.com/ahmmmeeedsherif/sunshinectf-writeup/blob/main/23.png" />

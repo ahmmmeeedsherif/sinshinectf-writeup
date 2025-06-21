@@ -1,6 +1,6 @@
 ## Enumeration
 **First I make nmap scan and I found SSH and HTTP Ports opened**
-![[1 1.png]]
+![[1 [1.png](https://github.com/ahmmmeeedsherif/sunshinectf-writeup/blob/main/1.png)]]
 **as the HTTP is opened so we will make directory enumeration to find hidden directories**
 ![[2 1.png]]
 **I found wordpress directory **
